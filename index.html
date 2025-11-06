@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joseph's Portfolio</title>
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(to bottom, gold, black);
+      --card-bg: rgba(0, 0, 0, 0.7);
+      --text-color: white;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      text-align: center;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    .dark-mode {
+      --bg-gradient: linear-gradient(to bottom, #111, #333);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --text-color: #f0f0f0;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-top: 40px;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2em;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+    }
+
+    .socials {
+      margin: 40px 0;
+    }
+
+    .socials a {
+      margin: 0 15px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .toggle-btn {
+      margin: 20px;
+      padding: 10px 20px;
+      background: #222;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <img src="profile.jpg.JPG" alt="okojie joseph" class="profile-img" />
+  <h1>I am a Software Engineer</h1>
+
+  <div class="projects">
+    <div class="card">
+      <h2>Weather Application</h2>
+      <p>Real-time weather updates with location-based forecasts.</p>
+    </div>
+    <div class="card">
+      <h2>Smart File Organizer</h2>
+      <p>Automatically sorts and categorizes your files.</p>
+    </div>
+    <div class="card">
+      <h2>Deep Scanner</h2>
+      <p>Scans directories for hidden or suspicious files.</p>
+    </div>
+    <div class="card">
+      <h2>Folder Scrambler</h2>
+      <p>Encrypts and obfuscates folder contents for security.</p>
+    </div>
+  </div>
+
+  <div class="socials">
+    <a href="https://github.com/techkojie" title="GitHub">🐙</a>
+    <a href="https://www.linkedin.com/in/joseph-okojie-50a4042a9/" title="LinkedIn">💼</a>
+    <a href="https://x.com/ose_jay1" title="X">✖️</a>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
